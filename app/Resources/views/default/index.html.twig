@@ -46,7 +46,7 @@
 
                             <li><a href="{{ path('fos_user_registration_register') }}"><span class="glyphicon glyphicon-grain"></span> | En tant que producteur</a></li>
                             <li><a href="{{ path('fos_user_registration_register') }}"><span class="glyphicon glyphicon-briefcase"></span> | En tant que consommateur professionnel</a></li>
-                            <li><a href="{{ path('fos_user_registration_register') }}"><span class="glyphicon glyphicon-user"></span> | En tant que consommateur</a></li>
+                            <li><a href="{{ path('fos_user_registration_register') }}"><span class="glyphicon glyphicon-user"></span> | En tant que particulier</a></li>
 
                         </ul>
                     
@@ -56,9 +56,9 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Connexion<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/login/producteur">En tant que producteur</a></li>
+                        <li><a href="{{ path('fos_user_security_login') }}">En tant que producteur</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="/login/consommateur">En tant que consommateur</a></li>
+                        <li><a href="{{ path('fos_user_security_login') }}">En tant que particulier</a></li>
                     </ul>
                 </li>
             </ul>
