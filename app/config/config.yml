@@ -143,3 +143,10 @@ assetic:
                 - "%kernel.root_dir%/../vendor/twbs/bootstrap/fonts/glyphicons-halflings-regular.woff"
 
             output: "fonts/glyphicons-halflings-regular.woff"
+
+#EasyAdmin Configuration
+easy_admin:
+    entities:
+        - AppBundle\Entity\Product
+        - AppBundle\Entity\Category
+        - AppBundle\Entity\User
