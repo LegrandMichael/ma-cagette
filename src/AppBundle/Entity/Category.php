@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Category
@@ -27,6 +28,17 @@ class Category
      * @ORM\Column(name="cat_name", type="string", length=255)
      */
     private $catName;
+
+    /**
+     * 
+     * @ORM\OneToMany(targetEntity="Product", mappedBy="category")
+     */
+    private $products;
+    // ...
+
+    public function __construct() {
+        $this->products = new ArrayCollection();
+    }
 
 
     /**
