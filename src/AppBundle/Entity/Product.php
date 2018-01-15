@@ -45,9 +45,15 @@ class Product
     /**
      * @var string
      *
-     * @ORM\Column(name="pro_img", type="blob")
+     * @ORM\Column(name="pro_img", type="string", length=255)
      */
     private $proImg;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Category" ,inversedBy="products")
+     * @ORM\JoinColumn(name="cat_id", referencedColumnName="id")
+     */
+    private $category;
 
 
     /**
