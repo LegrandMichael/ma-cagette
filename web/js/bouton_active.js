@@ -1,5 +1,8 @@
+console.log("je suis le js coucou !!");
+
 $(document).ready(function(){
     activerOnglet();
+    console.log("je suis pret!");
 });
      
 function activerOnglet()
@@ -10,27 +13,28 @@ function activerOnglet()
         // Je dois donc récupérer l'élément après "monprojet".
  
     var url=document.location.href.split("/"); // Je sépare selon les '/' de l'URL
-    var indiceMonProjet = array_search("monprojet",url); //Je récupère l'endroit où se situe 'monprojet'
+    var indiceMonProjet = array_search(url); //Je récupère l'endroit où se situe 'monprojet'
     var indiceOngletAppele = indiceMonProjet +1; // L'onglet que je cherche est donc à indiceMonProjet+1
- 
-    var ongletAppele = url[indiceOngletAppele]; //Je récupère le nom de l'onglet actif (page1)
+ console.log(url);
+ console.log(indiceMonProjet);
+    var ongletAppele = url[3]; //Je récupère le nom de l'onglet actif (page1)
     var ongletActif;
      
         // Traitement selon l'onglet récupéré
-        if( ongletAppele == 'page1')
+        if( ongletAppele === 'Catalogue')
     {
-        ongletActif = document.getElementById('id_li_page1');
+        ongletActif = $('#id_li_Catalogue');
     }
-    else if (ongletAppele == 'page2')
+    else if (ongletAppele === 'Contact')
     {
-        ongletActif = document.getElementById('id_li_page2');
+        ongletActif = $('#id_li_Contact');
     }
     else // Sinon, je rends actif mon onglet "Home"
     {
-        ongletActif = document.getElementByID('id_li_home');
+        ongletActif = $('#id_li_Accueil');
     }
      
-    ongletActif.className += "active";
+    ongletActif.addClass("active");
 }
  
 function array_search(what, where){
