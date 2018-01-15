@@ -59,13 +59,6 @@ class User extends BaseUser
     protected $type;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="usr_password", type="string", length=255)
-     */
-    protected $password;
-
-    /**
      * @var bool
      *
      * @ORM\Column(name="usr_is_business", type="boolean")
@@ -218,30 +211,6 @@ class User extends BaseUser
     }
 
     /**
-     * Set password.
-     *
-     * @param string $password
-     *
-     * @return User
-     */
-    public function setPassword($password)
-    {
-        $this->password = $password;
-
-        return $this;
-    }
-
-    /**
-     * Get password.
-     *
-     * @return string
-     */
-    public function getPassword()
-    {
-        return $this->password;
-    }
-
-    /**
      * Set isBusiness.
      *
      * @param bool $isBusiness
@@ -311,5 +280,5 @@ class User extends BaseUser
     public function getSiretNumber()
     {
         return $this->siretNumber;
-    s
+    }
 }
