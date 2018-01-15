@@ -12,7 +12,7 @@ class ContactController extends Controller
      */
     public function ContactAfficherAction()
     {
-        return $this->render('AppBundle:Accueil:contact_afficher.html.twig', array(
+        return $this->render('AppBundle:Contact:contact_afficher.html.twig', array(
             // ...
         ));
     }
