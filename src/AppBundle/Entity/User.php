@@ -311,5 +311,5 @@ class User extends BaseUser
     public function getSiretNumber()
     {
         return $this->siretNumber;
-    s
+    }
 }
