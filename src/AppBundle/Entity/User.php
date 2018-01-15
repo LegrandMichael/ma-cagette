@@ -28,63 +28,56 @@ class User extends BaseUser
      *
      * @ORM\Column(name="usr_first_name", type="string", length=255)
      */
-    private $usrFirstName;
+    protected $firstName;
 
     /**
      * @var string
      *
      * @ORM\Column(name="usr_last_name", type="string", length=255)
      */
-    private $usrLastName;
+    protected $lastName;
 
     /**
      * @var string
      *
      * @ORM\Column(name="usr_mail_address", type="string", length=255)
      */
-    private $usrMailAddress;
+    protected $mailAddress;
 
     /**
      * @var string
      *
      * @ORM\Column(name="usr_phone_number", type="string", length=16)
      */
-    private $usrPhoneNumber;
+    protected $phoneNumber;
 
     /**
      * @var string
      *
      * @ORM\Column(name="usr_type", type="string", length=25)
      */
-    private $usrType;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="usr_password", type="string", length=255)
-     */
-    private $usrPassword;
+    protected $type;
 
     /**
      * @var bool
      *
      * @ORM\Column(name="usr_is_business", type="boolean")
      */
-    private $usrIsBusiness;
+    protected $isBusiness;
 
     /**
      * @var string
      *
      * @ORM\Column(name="usr_siren_number", type="string", length=9, unique=true)
      */
-    private $usrSirenNumber;
+    protected $sirenNumber;
 
     /**
      * @var string
      *
      * @ORM\Column(name="usr_siret_number", type="string", length=5, unique=true)
      */
-    private $usrSiretNumber;
+    protected $siretNumber;
 
 
     /**
@@ -98,218 +91,194 @@ class User extends BaseUser
     }
 
     /**
-     * Set usrFirstName.
+     * Set firstName.
      *
-     * @param string $usrFirstName
+     * @param string $firstName
      *
      * @return User
      */
-    public function setUsrFirstName($usrFirstName)
+    public function setFirstName($firstName)
     {
-        $this->usrFirstName = $usrFirstName;
+        $this->firstName = $firstName;
 
         return $this;
     }
 
     /**
-     * Get usrFirstName.
+     * Get firstName.
      *
      * @return string
      */
-    public function getUsrFirstName()
+    public function getFirstName()
     {
-        return $this->usrFirstName;
+        return $this->firstName;
     }
 
     /**
-     * Set usrLastName.
+     * Set lastName.
      *
-     * @param string $usrLastName
+     * @param string $lastName
      *
      * @return User
      */
-    public function setUsrLastName($usrLastName)
+    public function setLastName($lastName)
     {
-        $this->usrLastName = $usrLastName;
+        $this->lastName = $lastName;
 
         return $this;
     }
 
     /**
-     * Get usrLastName.
+     * Get lastName.
      *
      * @return string
      */
-    public function getUsrLastName()
+    public function getLastName()
     {
-        return $this->usrLastName;
+        return $this->lastName;
     }
 
     /**
-     * Set usrMailAddress.
+     * Set mailAddress.
      *
-     * @param string $usrMailAddress
+     * @param string $mailAddress
      *
      * @return User
      */
-    public function setUsrMailAddress($usrMailAddress)
+    public function setMailAddress($mailAddress)
     {
-        $this->usrMailAddress = $usrMailAddress;
+        $this->mailAddress = $mailAddress;
 
         return $this;
     }
 
     /**
-     * Get usrMailAddress.
+     * Get mailAddress.
      *
      * @return string
      */
-    public function getUsrMailAddress()
+    public function getMailAddress()
     {
-        return $this->usrMailAddress;
+        return $this->mailAddress;
     }
 
     /**
-     * Set usrPhoneNumber.
+     * Set phoneNumber.
      *
-     * @param string $usrPhoneNumber
+     * @param string $phoneNumber
      *
      * @return User
      */
-    public function setUsrPhoneNumber($usrPhoneNumber)
+    public function setPhoneNumber($phoneNumber)
     {
-        $this->usrPhoneNumber = $usrPhoneNumber;
+        $this->phoneNumber = $phoneNumber;
 
         return $this;
     }
 
     /**
-     * Get usrPhoneNumber.
+     * Get phoneNumber.
      *
      * @return string
      */
-    public function getUsrPhoneNumber()
+    public function getPhoneNumber()
     {
-        return $this->usrPhoneNumber;
+        return $this->phoneNumber;
     }
 
     /**
-     * Set usrType.
+     * Set type.
      *
-     * @param string $usrType
+     * @param string $type
      *
      * @return User
      */
-    public function setUsrType($usrType)
+    public function setType($type)
     {
-        $this->usrType = $usrType;
+        $this->type = $type;
 
         return $this;
     }
 
     /**
-     * Get usrType.
+     * Get type.
      *
      * @return string
      */
-    public function getUsrType()
+    public function getType()
     {
-        return $this->usrType;
+        return $this->type;
     }
 
     /**
-     * Set usrPassword.
+     * Set isBusiness.
      *
-     * @param string $usrPassword
-     *
+     * @param bool $isBusiness
+     *  
      * @return User
      */
-    public function setUsrPassword($usrPassword)
+    public function setIsBusiness($isBusiness)
     {
-        $this->usrPassword = $usrPassword;
+        $this->isBusiness = $isBusiness;
 
         return $this;
     }
 
     /**
-     * Get usrPassword.
-     *
-     * @return string
-     */
-    public function getUsrPassword()
-    {
-        return $this->usrPassword;
-    }
-
-    /**
-     * Set usrIsBusiness.
-     *
-     * @param bool $usrIsBusiness
-     *
-     * @return User
-     */
-    public function setUsrIsBusiness($usrIsBusiness)
-    {
-        $this->usrIsBusiness = $usrIsBusiness;
-
-        return $this;
-    }
-
-    /**
-     * Get usrIsBusiness.
+     * Get isBusiness.
      *
      * @return bool
      */
-    public function getUsrIsBusiness()
+    public function getIsBusiness()
     {
-        return $this->usrIsBusiness;
+        return $this->isBusiness;
     }
 
     /**
-     * Set usrSirenNumber.
+     * Set sirenNumber.
      *
-     * @param string $usrSirenNumber
+     * @param string $sirenNumber
      *
      * @return User
      */
-    public function setUsrSirenNumber($usrSirenNumber)
+    public function setSirenNumber($sirenNumber)
     {
-        $this->usrSirenNumber = $usrSirenNumber;
+        $this->sirenNumber = $sirenNumber;
 
         return $this;
     }
 
     /**
-     * Get usrSirenNumber.
+     * Get sirenNumber.
      *
      * @return string
      */
-    public function getUsrSirenNumber()
+    public function getSirenNumber()
     {
-        return $this->usrSirenNumber;
+        return $this->sirenNumber;
     }
 
     /**
-     * Set usrSiretNumber.
+     * Set siretNumber.
      *
-     * @param string $usrSiretNumber
+     * @param string $siretNumber
      *
      * @return User
      */
-    public function setUsrSiretNumber($usrSiretNumber)
+    public function setSiretNumber($siretNumber)
     {
-        $this->usrSiretNumber = $usrSiretNumber;
+        $this->siretNumber = $siretNumber;
 
         return $this;
     }
 
     /**
-     * Get usrSiretNumber.
+     * Get siretNumber.
      *
      * @return string
      */
-    public function getUsrSiretNumber()
+    public function getSiretNumber()
     {
-        return $this->usrSiretNumber;
+        return $this->siretNumber;
     }
 }
