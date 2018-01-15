@@ -214,7 +214,7 @@ class User extends BaseUser
      * Set isBusiness.
      *
      * @param bool $isBusiness
-     *
+     *  
      * @return User
      */
     public function setIsBusiness($isBusiness)
