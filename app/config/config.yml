@@ -39,7 +39,12 @@ twig:
    debug: '%kernel.debug%'
    strict_variables: '%kernel.debug%'
    form_themes:
-       - 'bootstrap_3_layout.html.twig' 
+       - 'bootstrap_3_layout.html.twig'
+       - 'GoogleMapsBundle:Form:google_maps_layout.html.twig'
+
+#API Google Maps Configuration 
+google_maps:
+    api_key: 'AIzaSyA1RPIMAqXR7AVxGvS97SAjHVT6JF3b-OU'
 
 # Doctrine Configuration
 doctrine:
