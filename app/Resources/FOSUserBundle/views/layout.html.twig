@@ -24,7 +24,11 @@
         {% endif %}
 
         <div class="container">
-            {% block fos_user_content %}
-            {% endblock fos_user_content %}
+            <div class="row">
+                <div class="col-md-offset-4 col-md-4">
+                    {% block fos_user_content %}
+                    {% endblock fos_user_content %}
+                </div>
+            </div>
         </div>
     {% endblock %}
