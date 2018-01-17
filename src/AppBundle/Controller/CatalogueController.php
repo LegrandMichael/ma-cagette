@@ -12,9 +12,13 @@ class CatalogueController extends Controller
      */
     public function CatalogueAfficherAction()
     {
+
+        $em = $this->getDoctrine()->getManager();
+        $products = $em->getRepository('AppBundle:Product')->findAll();
         return $this->render('AppBundle:Catalogue:catalogue_afficher.html.twig', array(
-            // ...
+            'products' => $products,
         ));
+
     }
 
 }
