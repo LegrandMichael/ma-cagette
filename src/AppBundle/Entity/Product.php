@@ -161,4 +161,16 @@ class Product
     {
         return $this->proImg;
     }
+
+
+
+    /**
+     * Get category.
+     *
+     * @return string
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
 }

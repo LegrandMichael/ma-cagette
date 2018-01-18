@@ -2,11 +2,16 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Product;
+use AppBundle\Entity\Category;
+
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
+
 class CatalogueController extends Controller
 {
+
     /**
      * @Route("Catalogue")
      */
@@ -14,7 +19,8 @@ class CatalogueController extends Controller
     {
 
         $em = $this->getDoctrine()->getManager();
-        $products = $em->getRepository('AppBundle:Product')->findAll();
+        $products = $em->getRepository('AppBundle:Product')->getTriCategory();
+        
         return $this->render('AppBundle:Catalogue:catalogue_afficher.html.twig', array(
             'products' => $products,
         ));
