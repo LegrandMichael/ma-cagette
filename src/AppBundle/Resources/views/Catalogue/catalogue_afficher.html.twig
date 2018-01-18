@@ -49,4 +49,36 @@
         </div>
 
     </div>
+
+
+    <div class="row">
+
+        <div class="col-xs-12">
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Catégorie</th>
+                        <th>Nom</th>
+                        <th>Description</th>
+                        <th>Prix</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for product in products %}
+                        {# {{ dump(product)}} #}
+                        <tr>
+                            <td>{{ product.category.catName }}</td>
+                            <td>{{ product.proName }}</td>
+                            <td>{{ product.proDescription }}</td>
+                            <td>{{ product.proPrice }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
 {% endblock %}
