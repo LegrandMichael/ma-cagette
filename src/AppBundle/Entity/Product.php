@@ -50,10 +50,10 @@ class Product
     private $proImg;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Category" ,inversedBy="products")
-     * @ORM\JoinColumn(name="cat_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="SubCategory" ,inversedBy="products")
+     * @ORM\JoinColumn(name="sub_cat_id", referencedColumnName="id")
      */
-    private $category;
+    private $subCategory;
 
 
     /**
@@ -165,12 +165,12 @@ class Product
 
 
     /**
-     * Get category.
+     * Get subCategory.
      *
      * @return string
      */
-    public function getCategory()
+    public function getSubCategory()
     {
-        return $this->category;
+        return $this->subCategory;
     }
 }
