@@ -42,4 +42,24 @@
             </div>
     </div>
 
+
+    <div>
+
+        {% for category in categories %}
+
+            <p>{{ category.catName }}</p>
+            <ul>
+            
+                {% for product in category.products %}
+
+                    <li>{{ product.proName }}</li>
+
+                {% endfor %}
+
+            </ul>
+
+        {% endfor %}
+
+    </div>
+
 {% endblock %}
