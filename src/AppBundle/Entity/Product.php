@@ -165,12 +165,12 @@ class Product
 
 
     /**
-     * Get product.
+     * Get subCategory.
      *
      * @return string
      */
-    public function getProduct()
+    public function getSubCategory()
     {
-        return $this->product;
+        return $this->subCategory;
     }
 }

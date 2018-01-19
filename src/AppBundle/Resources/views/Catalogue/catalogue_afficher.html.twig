@@ -17,6 +17,7 @@
                         <thead>
                             <tr>
                                 <th class="text-center">Catégorie</th>
+                                <th class="text-center">Sous Catégories</th>
                                 <th class="text-center">Nom</th>
                                 <th class="text-center">Description</th>
                                 <th class="text-center">Prix</th>
@@ -27,7 +28,8 @@
                             {% for product in products %}
                                 {# {{ dump(product)}} #}
                                 <tr>
-                                    <td class="text-center">{{ product.category.catName }}</td>
+                                    <td class="text-center">{{ product.subCategory.category.catName }}</td>
+                                    <td class="text-center">{{ product.subCategory.subName }}</td>
                                     <td class="text-center">{{ product.proName }}</td>
                                     <td>{{ product.proDescription }}</td>
                                     <td class="text-center">{{ product.proPrice }}</td>
