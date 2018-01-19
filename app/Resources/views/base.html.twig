@@ -16,8 +16,23 @@
     <body>
         {% include 'topnav.html.twig' %}
     
-        <div class="container">
-            {% block body %}{% endblock %}
+        <div class="row">
+
+            <div class="col-xs-2">
+                {{ render(controller('AppBundle:ToolBarSort:sort')) }}
+            </div>
+
+            <div class="col-xs-10">
+
+                <div class="container">
+
+                    {% block body %}
+                
+                    {% endblock %}
+
+                </div>
+
+            </div>
         </div>
         
         {% include 'footer.html.twig' %}
