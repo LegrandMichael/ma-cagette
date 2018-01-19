@@ -19,7 +19,9 @@ class CatalogueController extends Controller
     {
 
         $em = $this->getDoctrine()->getManager();
-        $products = $em->getRepository('AppBundle:Product')->getTriCategory();
+        // $products = $em->getRepository('AppBundle:Product')->getTriCategory();
+        $products = $em->getRepository('AppBundle:Product')->findBy(array(),array("proName" => "ASC"));
+
         
         return $this->render('AppBundle:Catalogue:catalogue_afficher.html.twig', array(
             'products' => $products,
