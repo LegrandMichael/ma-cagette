@@ -12,12 +12,16 @@
     border: 1px solid rgba(86, 61, 124, .2);
 }
 
-.red {
-    color: red;
-}
-
 .carousel-inner>.item>img {
     margin: 0 auto;
+}
+
+.puce {
+    list-style-type: none; 
+}
+
+.espace {
+    line-height: 200px;
 }
 
 footer {
