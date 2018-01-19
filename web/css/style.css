@@ -20,10 +20,6 @@
     list-style-type: none; 
 }
 
-.espace {
-    line-height: 200px;
-}
-
 footer {
     padding-top: 20px;
 }
@@ -34,8 +30,12 @@ footer {
 
 .poussoir {
 
-margin-left: 25px;
+    margin-left: 25px;
 
+}
 
+.contactTitre {
+
+    margin-bottom: 50px;
 
 }
