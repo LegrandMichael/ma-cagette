@@ -19,3 +19,11 @@
 .carousel-inner>.item>img {
     margin: 0 auto;
 }
+
+footer {
+    padding-top: 20px;
+}
+
+/*  #maps {
+    height: 100%;
+}  */
