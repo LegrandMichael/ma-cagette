@@ -5,59 +5,52 @@
 {% block body %}
 
 <div class="container">
-
     <div class="row">
-
-        <div class="col-xs-6 col-xs-offset-3">
-
-            <h1 class="text-center">Pour nous contacter</h1>
-
+        <div class="col-xs-6 col-xs-offset-3 contactTitre">
+            <h2 class="text-center"><strong>Pour nous contacter</strong></h2>
         </div>
-
-        <div class="row">
-
-            <div class="col-xs-4">
-
-                <h4>Service client</h4>
-
-                <ul>
-                    
-                    <li>téléphone : 04 XX XX XX XX</li>
-                    <li>mail : sav@ma-cagette.fr</li>
-                    
-                </ul>
-
-            </div>
-
-            <div class="col-xs-4">
-
-                <h4>Service plaintes</h4>
-
-                <ul>
-                    
-                    <li>téléphone : 04 XX XX XX XX</li>
-                    <li>mail : plaintes@ma-cagette.fr</li>
-                    
-                </ul>
-
-            </div>
-
-            <div class="col-xs-4">
-
-                <h4>Service Suggestion</h4>
-
-                <ul>
-                    
-                    <li>téléphone : 04 XX XX XX XX</li>
-                    <li>mail : suggestion@ma-cagette.fr</li>
-                    
-                </ul>
-
-            </div>
-            
-        </div>
-
     </div>
 
+{# --- class des sous-titre --- #}
+        
+    <div class="row">
+        <div class="col-md-4">
+            <h3 class="text-center"><strong>Service client</strong></h3>
+        </div>
+            
+        <div class="col-md-4">
+            <h3 class="text-center"><strong>Service plaintes</strong></h3>
+        </div>
+            
+        <div class="col-md-4">
+            <h3 class="text-center"><strong>Service Suggestion</strong></h3>
+        </div>
+    </div>
+
+{# --- class téléphone mail --- #}
+    <div class="row">
+        <div class="col-md-4">
+            <ul class="puce">
+                <li class="text-center">téléphone : 04 XX XX XX XX</li> 
+                <li class="text-center"><a>mail : sav@ma-cagette.fr</a></li>
+            </ul>
+        </div>
+            
+        <div class="col-md-4">
+            <ul class="puce">
+                <li class="text-center">téléphone : 04 XX XX XX XX</li>
+                <li class="text-center"><a>mail : sav@ma-cagette.fr</a></li>
+            </ul>
+        </div>
+            
+        <div class="col-md-4">
+            <ul class="puce">
+                <li class="text-center">téléphone : 04 XX XX XX XX</li>
+                <li class="text-center"><a>mail : sav@ma-cagette.fr</a></li>
+            </ul>
+        </div>
+    </div>
+    
 </div>
+
 {% endblock %}

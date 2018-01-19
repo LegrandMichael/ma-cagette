@@ -12,12 +12,12 @@
     border: 1px solid rgba(86, 61, 124, .2);
 }
 
-.red {
-    color: red;
-}
-
 .carousel-inner>.item>img {
     margin: 0 auto;
+}
+
+.puce {
+    list-style-type: none; 
 }
 
 footer {
@@ -27,3 +27,15 @@ footer {
 /*  #maps {
     height: 100%;
 }  */
+
+.poussoir {
+
+    margin-left: 25px;
+
+}
+
+.contactTitre {
+
+    margin-bottom: 50px;
+
+}
