@@ -76,7 +76,7 @@ class Category
     }
 
     /**
-     * Get subCategory.
+     * Get subCategories.
      *
      * @return string
      */

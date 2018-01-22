@@ -1,0 +1,32 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}toto{% endblock %}
+
+{% block body %}
+
+    {% if subCategory is defined %}
+
+        {% for product in subCategory.products %}
+
+            {{ product.proName }}
+
+        {% endfor %}
+
+    {% endif %}
+
+    {% if Category is defined %}
+
+        {% for subCategory in Category.subCategories %}
+
+            {% for product in subCategory.products %}
+
+                {{ product.proName }}
+
+            {% endfor %}
+
+        {% endfor %}
+
+    {% endif %}
+
+
+{% endblock %}
