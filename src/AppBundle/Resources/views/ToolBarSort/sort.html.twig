@@ -4,11 +4,11 @@
         <div class="col-md-12 ">
             <div class="nav navbar-nav row">
                 {% for category in categories %}
-                    <button id="" class=" btn menuCategory btn_class" href="#">{{ category.catName }}</button>
+                    <a id="" class=" btn menuCategory btn_class" href="/category/{{ category.catName }}">{{ category.catName }}</a>
                     <div class="nav">
 
                         {% for subCategory in category.subCategories %}
-                            <button id="" class="btn menuButton btn_sclass" href="">{{ subCategory.subName }}</button>
+                            <a id="" class="btn menuButton btn_sclass" href="/category/subCategory/{{ subCategory.subName }}">{{ subCategory.subName }}</a>
                         {% endfor %}
                     </div>
                 {% endfor %}
