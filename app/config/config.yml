@@ -155,8 +155,17 @@ assetic:
             output: "fonts/glyphicons-halflings-regular.woff"
 
 #EasyAdmin Configuration
-easy_admin:
-    entities:
-        - AppBundle\Entity\Product
-        - AppBundle\Entity\Category
-        - AppBundle\Entity\User
+#easy_admin:
+    #entities:
+        #- AppBundle\Entity\Product
+        #- AppBundle\Entity\Category
+        #- AppBundle\Entity\User
+
+#Sonata Configuration
+sonata_block:
+    default_contexts: [] # this line can be removed for sonata-project/block-bundle >= 3.10.0
+    blocks:
+        # enable the SonataAdminBundle block
+        sonata.admin.block.admin_list:
+            contexts: [admin]
+        # ...
