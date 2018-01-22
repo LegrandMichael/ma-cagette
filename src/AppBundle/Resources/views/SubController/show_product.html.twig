@@ -4,29 +4,89 @@
 
 {% block body %}
 
-    {% if subCategory is defined %}
 
-        {% for product in subCategory.products %}
+    <div class="container">
 
-            {{ product.proName }}
+        {% if subCategory is defined %}
+            <h1 class="text-center">Recherche de "{{ subCategory.subName }}"</h1>
 
-        {% endfor %}
+                <div class="row">
 
-    {% endif %}
+                    <div class="col-xs-12">
 
-    {% if Category is defined %}
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">Catégorie</th>
+                                    <th class="text-center">Sous Catégories</th>
+                                    <th class="text-center">Nom</th>
+                                    <th class="text-center">Description</th>
+                                    <th class="text-center">Prix</th>
+                                    <th class="text-center">Ajouter au panier</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                    {% for product in subCategory.products %}
 
-        {% for subCategory in Category.subCategories %}
+                                        <tr>
+                                            <td class="text-center">{{ product.subCategory.category.catName }}</td>
+                                            <td class="text-center">{{ product.subCategory.subName }}</td>
+                                            <td class="text-center">{{ product.proName }}</td>
+                                            <td>{{ product.proDescription }}</td>
+                                            <td class="text-center">{{ product.proPrice }}</td>
+                                            <td class="text-center"><button type="button" class="btn btn-success"><span style="color: #955628;" class="glyphicon glyphicon-shopping-cart"></span></button></td>
+                                        </tr>
+                            
+                                    {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        {% endif %}
+    </div>
 
-            {% for product in subCategory.products %}
 
-                {{ product.proName }}
+        {% if Category is defined %}
+            <h1 class="text-center">Recherche de "{{ Category.catName }}"</h1>
 
-            {% endfor %}
+                <div class="row">
 
-        {% endfor %}
+                    <div class="col-xs-12">
 
-    {% endif %}
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">Catégorie</th>
+                                    <th class="text-center">Sous Catégories</th>
+                                    <th class="text-center">Nom</th>
+                                    <th class="text-center">Description</th>
+                                    <th class="text-center">Prix</th>
+                                    <th class="text-center">Ajouter au panier</th>
+                                </tr>
+                            </thead>
+                            <tbody>
 
+                                {% for subCategory in Category.subCategories %}
+
+                                    {% for product in subCategory.products %}
+
+                                        <tr>
+                                            <td class="text-center">{{ product.subCategory.category.catName }}</td>
+                                            <td class="text-center">{{ product.subCategory.subName }}</td>
+                                            <td class="text-center">{{ product.proName }}</td>
+                                            <td>{{ product.proDescription }}</td>
+                                            <td class="text-center">{{ product.proPrice }}</td>
+                                            <td class="text-center"><button type="button" class="btn btn-success"><span style="color: #955628;" class="glyphicon glyphicon-shopping-cart"></span></button></td>
+                                        </tr>
+
+                                    {% endfor %}
+
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        {% endif %}
+    </div>
 
 {% endblock %}
