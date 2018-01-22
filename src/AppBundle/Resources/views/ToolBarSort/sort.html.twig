@@ -5,9 +5,9 @@
         <p>{{ category.catName }}</p>
             <ul>
             
-                {% for product in category.products %}
+                {% for subCategory in category.subCategories %}
 
-                    <li>{{ product.proName }}</li>
+                    <li class='puce'><a href="#">{{ subCategory.subName }}</a></li>
 
                 {% endfor %}
 

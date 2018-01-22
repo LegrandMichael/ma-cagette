@@ -31,13 +31,13 @@ class Category
 
     /**
      * 
-     * @ORM\OneToMany(targetEntity="Product", mappedBy="category")
+     * @ORM\OneToMany(targetEntity="SubCategory", mappedBy="category")
      */
-    private $products;
+    private $subCategories;
     // ...
 
     public function __construct() {
-        $this->products = new ArrayCollection();
+        $this->subCategories = new ArrayCollection();
     }
 
 
@@ -76,12 +76,12 @@ class Category
     }
 
     /**
-     * Get products.
+     * Get subCategory.
      *
      * @return string
      */
-    public function getProducts()
+    public function getSubCategories()
     {
-        return $this->products;
+        return $this->subCategories;
     }
 }
