@@ -1,18 +1,18 @@
-<div>
+<nav class="row navbar navbar-default nav-marge">
+    <!-- Boutons menu -->
+    <div class="container-fluid">
+        <div class="col-md-12 ">
+            <div class="nav navbar-nav row">
+                {% for category in categories %}
+                    <button id="" class=" btn menuCategory btn_class" href="#">{{ category.catName }}</button>
+                    <div class="nav">
 
-    {% for category in categories %}
-
-        <p>{{ category.catName }}</p>
-            <ul>
-            
-                {% for product in category.products %}
-
-                    <li class='puce'><a>{{ product.proName }}</a></li>
-
+                        {% for subCategory in category.subCategories %}
+                            <button id="" class="btn menuButton btn_sclass" href="">{{ subCategory.subName }}</button>
+                        {% endfor %}
+                    </div>
                 {% endfor %}
-
-            </ul>
-
-    {% endfor %}
-
-</div>
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,9 +1,9 @@
-.row [class^="col-"] {
+/* .row [class^="col-"] {
     background-color: #eee;
     border: 1px solid #ddd;
     background-color: rgba(86, 61, 124, .15);
     border: 1px solid rgba(86, 61, 124, .2);
-}
+} */
 
 .content {
     padding: 40px 15px;
@@ -37,5 +37,11 @@ footer {
 .contactTitre {
 
     margin-bottom: 50px;
+
+}
+
+.nav-marge {
+
+    padding-top: 15px;
 
 }
