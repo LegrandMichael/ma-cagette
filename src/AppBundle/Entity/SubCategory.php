@@ -93,5 +93,15 @@ class SubCategory
     {
         return $this->category;
     }
+
+    /**
+     * Get product.
+     *
+     * @return string
+     */
+    public function getProducts()
+    {
+        return $this->products;
+    }
 }
 

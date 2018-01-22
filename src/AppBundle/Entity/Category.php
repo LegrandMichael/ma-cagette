@@ -80,8 +80,8 @@ class Category
      *
      * @return string
      */
-    public function getSubCategory()
+    public function getSubCategories()
     {
-        return $this->SubCategory;
+        return $this->subCategories;
     }
 }
