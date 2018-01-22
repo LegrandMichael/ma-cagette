@@ -8,26 +8,22 @@ use AppBundle\Entity\Category;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
-
-class CatalogueController extends Controller
+class ToolBarSortController extends Controller
 {
 
-    /**
-     * @Route("Catalogue")
-     */
-    public function CatalogueAfficherAction()
+    
+    public function SortAction()
     {
 
         $em = $this->getDoctrine()->getManager();
         // $products = $em->getRepository('AppBundle:Product')->getTriCategory();
         $products = $em->getRepository('AppBundle:Product')->findBy(array(),array("proName" => "ASC"));
         $categories = $em->getRepository('AppBundle:Category')->findBy(array(),array("catName" => "ASC"));
-        
-        return $this->render('AppBundle:Catalogue:catalogue_afficher.html.twig', array(
+
+        return $this->render('AppBundle:ToolBarSort:sort.html.twig', array(
             'products' => $products,
             'categories' => $categories,
         ));
-
     }
 
 }

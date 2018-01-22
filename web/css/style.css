@@ -20,10 +20,6 @@
     list-style-type: none; 
 }
 
-.espace {
-    line-height: 200px;
-}
-
 footer {
     padding-top: 20px;
 }
@@ -31,3 +27,15 @@ footer {
 /*  #maps {
     height: 100%;
 }  */
+
+.poussoir {
+
+    margin-left: 25px;
+
+}
+
+.contactTitre {
+
+    margin-bottom: 50px;
+
+}

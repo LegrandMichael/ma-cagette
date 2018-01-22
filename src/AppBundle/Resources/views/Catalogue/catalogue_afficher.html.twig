@@ -7,77 +7,58 @@
 
     <div class="container">
 
-        <h1>Catalogue</h1>
+        <h1 class="text-center">Catalogue</h1>
 
-        <div class="row">
+            <div class="row">
 
-            <div class="col-xs-12">
+                <div class="col-xs-12">
 
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Catégorie</th>
-                            <th>Nom</th>
-                            <th>Description</th>
-                            <th>Prix</th>
-                        </tr>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="text-center">Catégorie</th>
+                                <th class="text-center">Nom</th>
+                                <th class="text-center">Description</th>
+                                <th class="text-center">Prix</th>
+                                <th class="text-center">Ajouter au panier</th>
+                            </tr>
                         </thead>
-                    <tbody>
-                        <tr>
-                            <td>Fruits</td>
-                            <td>Bananes</td>
-                            <td>je suis la grosse description du produit par ce que blblblal bla lbla lz zek okdmq kmf kdmoqskd kqspdkqkdk qoskdpo kspd kqskdo qskdpo kqsdk qpskd qksmldk mqlskdml kqsmdk qksdk qoskdpo kqsdk poqskdopqk sdkpoq ksodk qopskdpok qposkdo kqsdk poqksdok qposkd kqspkd qsd</td>
-                            <td>5 €</td>
-                        </tr>
-                        <tr>
-                            <td>Légumes</td>
-                            <td>Pommes de terres</td>
-                            <td>je suis la grosse description du produit par ce que blblblal bla lbla lz zek okdmq kmf kdmoqskd kqspdkqkdk qoskdpo kspd kqskdo qskdpo kqsdk qpskd qksmldk mqlskdml kqsmdk qksdk qoskdpo kqsdk poqskdopqk sdkpoq ksodk qopskdpok qposkdo kqsdk poqksdok qposkd kqspkd qsd</td>
-                            <td>5 €</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>Bananes</td>
-                            <td>je suis la grosse description du produit par ce que blblblal bla lbla lz zek okdmq kmf kdmoqskd kqspdkqkdk qoskdpo kspd kqskdo qskdpo kqsdk qpskd qksmldk mqlskdml kqsmdk qksdk qoskdpo kqsdk poqskdopqk sdkpoq ksodk qopskdpok qposkdo kqsdk poqksdok qposkd kqspkd qsd</td>
-                            <td>5 €</td>
-                        </tr>
-                    </tbody>
-                </table>
+                        <tbody>
+                            {% for product in products %}
+                                {# {{ dump(product)}} #}
+                                <tr>
+                                    <td class="text-center">{{ product.category.catName }}</td>
+                                    <td class="text-center">{{ product.proName }}</td>
+                                    <td>{{ product.proDescription }}</td>
+                                    <td class="text-center">{{ product.proPrice }}</td>
+                                    <td class="text-center"><button type="button" class="btn btn-success"><span style="color: #955628;" class="glyphicon glyphicon-shopping-cart"></span></button></td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                </div>
 
             </div>
-
-        </div>
-
     </div>
 
 
-    <div class="row">
+    <div>
 
-        <div class="col-xs-12">
+        {% for category in categories %}
 
-            <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <th>Catégorie</th>
-                        <th>Nom</th>
-                        <th>Description</th>
-                        <th>Prix</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for product in products %}
-                        {# {{ dump(product)}} #}
-                        <tr>
-                            <td>{{ product.category.catName }}</td>
-                            <td>{{ product.proName }}</td>
-                            <td>{{ product.proDescription }}</td>
-                            <td>{{ product.proPrice }}</td>
-                        </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+            <p>{{ category.catName }}</p>
+            <ul>
+            
+                {% for product in category.products %}
 
-        </div>
+                    <li>{{ product.proName }}</li>
+
+                {% endfor %}
+
+            </ul>
+
+        {% endfor %}
 
     </div>
 

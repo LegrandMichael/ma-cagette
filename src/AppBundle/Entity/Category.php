@@ -74,4 +74,14 @@ class Category
     {
         return $this->catName;
     }
+
+    /**
+     * Get products.
+     *
+     * @return string
+     */
+    public function getProducts()
+    {
+        return $this->products;
+    }
 }
