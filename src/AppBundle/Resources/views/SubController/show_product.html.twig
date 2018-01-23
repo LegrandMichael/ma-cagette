@@ -34,7 +34,7 @@
                                             <td class="text-center">{{ product.proName }}</td>
                                             <td>{{ product.proDescription }}</td>
                                             <td class="text-center">{{ product.proPrice }}</td>
-                                            <td class="text-center"><button type="button" class="btn btn-success"><span style="color: #955628;" class="glyphicon glyphicon-shopping-cart"></span></button></td>
+                                            <td class="text-center"><a href="{{ path('app_cart_showcart') }}"><button type="button" class="btn btn-success"><span style="color: #955628;" class="glyphicon glyphicon-shopping-cart"></span></button></a></td>
                                         </tr>
                             
                                     {% endfor %}
@@ -76,7 +76,7 @@
                                             <td class="text-center">{{ product.proName }}</td>
                                             <td>{{ product.proDescription }}</td>
                                             <td class="text-center">{{ product.proPrice }}</td>
-                                            <td class="text-center"><button type="button" class="btn btn-success"><span style="color: #955628;" class="glyphicon glyphicon-shopping-cart"></span></button></td>
+                                            <td class="text-center"><a href="{{ path('app_cart_showcart') }}"><button type="button" class="btn btn-success"><span style="color: #955628;" class="glyphicon glyphicon-shopping-cart"></span></button></a></td>
                                         </tr>
 
                                     {% endfor %}
